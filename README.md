@@ -1,6 +1,6 @@
 # TravelAgency
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
+In progress - travel agency project, using Angular 5, Angular Google maps, Fluid Responsive Typography (poly-size.scss), Angular Material and much more in the future! 
 
 ## Development server
 
