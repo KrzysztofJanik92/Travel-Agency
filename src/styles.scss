@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100i,300,300i,400,400i,500,500i,700');
+
+// fonts
+$roboto: 'Roboto', sans-serif;
+
+//colors
+$summerSky: #286da8;
+$warmPeach: #fa443f;
+$field: #b37d4e;
+$breeze: #438496;
+$charcoal: #373737;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $roboto;
+}
+// scrollbar
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+// scroll track
+::-webkit-scrollbar-track {
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  background: rgba(0, 0, 0, .2);
+}
+
+// scroll handle
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  background: rgba(0, 0, 0, .7);
+  &:hover {
+    background: rgba(0, 0, 0, .6);
+  }
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(0, 0, 0, .7);
+}

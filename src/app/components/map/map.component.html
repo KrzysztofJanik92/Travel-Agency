@@ -1,0 +1,22 @@
+<agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom" (click)="onChoseLocation($event)">
+  <agm-marker [latitude]="52.229" [longitude]="21.011">
+    <agm-info-window>Warszawa - biuro</agm-info-window>
+  </agm-marker>
+  <agm-marker [latitude]="51.100" [longitude]="17.033">
+    <agm-info-window>Wroclaw - biuro</agm-info-window>
+  </agm-marker>
+  <agm-marker [latitude]="54.352" [longitude]="18.664">
+    <agm-info-window>Gdansk - biuro</agm-info-window>
+  </agm-marker>
+  <agm-marker [latitude]="51.250" [longitude]="22.566">
+    <agm-info-window>Lublin - biuro</agm-info-window>
+  </agm-marker>
+</agm-map>
+
+<button (click)="up()">up</button>
+<button (click)="down()">down</button>
+<button (click)="left()">left</button>
+<button (click)="right()">right</button>
+<button (click)="zoomIn()">+</button>
+<button (click)="zoomOut()">-</button>
+

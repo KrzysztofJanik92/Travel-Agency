@@ -1,0 +1,280 @@
+<div class="home">
+
+  <div class="menu" [class.sticky]="isSticky" (scroll)="onWindowScroll()">
+    <div class="menu__logo-container">
+      <i class="fa fa-area-chart"></i>
+    </div>
+    <img src="../../../assets/menu-icon.png" class="menu__hamburger" (click)="openMenu()">
+    <div class="opened-menu" [style.display]="isOpen ? 'flex' : 'none'">
+      <div class="opened-menu__close" (click)="closeMenu()">
+        x
+      </div>
+      <ul class="opened-menu__ul">
+        <li class="opened-menu__li">
+          <a href="#" class="opened-menu__a">
+            home
+          </a>
+        </li>
+        <li class="opened-menu__li">
+          <a (click)="navigateOffer()" class="opened-menu__a">
+            oferta
+          </a>
+        </li>
+        <li class="opened-menu__li">
+          <a href="#" class="opened-menu__a">
+            products
+          </a>
+        </li>
+        <li class="opened-menu__li">
+          <a href="#" class="opened-menu__a">
+            prices
+          </a>
+        </li>
+        <li class="opened-menu__li">
+          <a href="#" class="opened-menu__a">
+            blog
+          </a>
+        </li>
+        <li class="opened-menu__li">
+          <a href="#" class="opened-menu__a">
+            contact
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="img-1 menu-item" (mouseenter)="updateDesc('Lorem Ipsum'); onAnimation()"
+       (mouseleave)="updateDesc('ChrisTravels'); outAnimation()">
+    <div class="menu__item--animation" [class.animation]="animation || randomDiv === '0'"></div>
+    <div class="overlay" (mouseover)="hover($event)" (mouseout)="hover($event)">
+      <div class="overlay__icon-container">
+        <img src="../../../assets/img-ik-erp.png" class="overlay__icon">
+      </div>
+      <div class="overlay__desc-container">
+        <h2 class="overlay__title">Lorem Ipsum</h2>
+        <p class="overlay__description">Nemo enim ipsam voluptatem quia voluptas</p>
+        <a href="#" class="menu-button">Więcej </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="center-box">
+    <div class="center-box__text-container">
+      <div class="line"></div>
+      <h1 class="center-box__main-text">{{desc}}</h1>
+      <h1 class="center-box__mobile-text">ChrisTravels</h1>
+    </div>
+  </div>
+
+  <div class="img-2 menu-item" (mouseenter)="updateDesc('Lorem Ipsum Sit dolor amet')"
+       (mouseleave)="updateDesc('ChrisTravels')">
+    <div class="overlay" (mouseover)="hover($event)" (mouseout)="hover($event)">
+      <div class="overlay__icon-container">
+        <img src="../../../assets/img-ik-erp.png" class="overlay__icon">
+      </div>
+      <div class="overlay__desc-container">
+        <h2 class="overlay__title">Lorem Ipsum</h2>
+        <p class="overlay__description">Nemo enim ipsam voluptatem quia voluptas</p>
+        <a href="#" class="menu-button">Więcej </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="img-3 menu-item" (mouseenter)="updateDesc('Lorem ipsum dolor sit amet, consectetur adipiscing elit')"
+       (mouseleave)="updateDesc('ChrisTravels')">
+    <div class="overlay" (mouseover)="hover($event)" (mouseout)="hover($event)">
+      <div class="overlay__icon-container">
+        <img src="../../../assets/img-ik-erp.png" class="overlay__icon">
+      </div>
+      <div class="overlay__desc-container">
+        <h2 class="overlay__title">Git</h2>
+        <p class="overlay__description">ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+          doloremque laudantium, totam rem
+          aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+        <a href="#" class="menu-button">Więcej </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="img-4 menu-item"
+       (mouseenter)="updateDesc('Lorem Ipsum Sit dolor amet')"
+       (mouseleave)="updateDesc('ChrisTravels')">
+    <div class="overlay" (mouseover)="hover($event)" (mouseout)="hover($event)">
+      <div class="overlay__icon-container">
+        <img src="../../../assets/img-ik-erp.png" class="overlay__icon">
+      </div>
+      <div class="overlay__desc-container">
+        <h2 class="overlay__title">Lorem Ipsum Sit dolor amet</h2>
+        <p class="overlay__description">ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+          doloremque laudantium, totam rem
+          aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+        <a href="#" class="menu-button">Więcej </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="img-5 menu-item" (mouseenter)="updateDesc('Duis accumsan justo ex, eget suscipit mauris ultricies non')"
+       (mouseleave)="updateDesc('ChrisTravels')">
+    <div class="overlay" (mouseover)="hover($event)" (mouseout)="hover($event)">
+      <div class="overlay__icon-container">
+        <img src="../../../assets/img-ik-erp.png" class="overlay__icon">
+      </div>
+      <div class="overlay__desc-container">
+        <h2 class="overlay__title">cos tam</h2>
+        <p class="overlay__description">ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+          doloremque laudantium, totam rem
+          aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+        <a href="#" class="menu-button">Więcej </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="img-6 menu-item" (mouseenter)="updateDesc('Lorem Ipsum 2')" (mouseleave)="updateDesc('ChrisTravels')">
+    <div class="overlay" (mouseover)="hover($event)" (mouseout)="hover($event)">
+      <div class="overlay__icon-container" data-aos="slide-left">
+        <img src="../../../assets/img-ik-erp.png" class="overlay__icon">
+      </div>
+      <div class="overlay__desc-container">
+        <h2 class="overlay__title">Lorem Ipsum 2</h2>
+        <p class="overlay__description">ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+          doloremque laudantium, totam rem
+          aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+        <a href="#" class="menu-button">Więcej </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<section>
+  <map></map>
+</section>
+
+<footer class="footer">
+  <div class="footer__navbar">
+    <img src="../../../assets/pgit-logotype.png" class="menu__logo">
+  </div>
+  <div class="footer__content">
+    <ul class="footer__ul">
+      <li class="footer__li">
+        <span class="footer__title">Title</span>
+      </li>
+      <li class="footer__li">
+        <a href="#" class="footer__link">item A item A Lorem Ipsum</a>
+      </li>
+      <li class="footer__li">
+        <a href="#" class="footer__link">Item B</a>
+      </li>
+      <li class="footer__li">
+        <a href="#" class="footer__link">Item C</a>
+      </li>
+    </ul>
+
+    <ul class="footer__ul">
+      <li class="footer__li">
+        <span class="footer__title">Title</span>
+      </li>
+      <li class="footer__li">
+        <a href="#" class="footer__link">item A item A Lorem Ipsum</a>
+      </li>
+      <li class="footer__li">
+        <a href="#" class="footer__link">Item B item A Lorem Ipsum</a>
+      </li>
+      <li class="footer__li">
+        <a href="#" class="footer__link">Item C item A Lorem Ipsum</a>
+      </li>
+      <li class="footer__li">
+        <a href="#" class="footer__link">Item D item A Lorem Ipsum</a>
+      </li>
+    </ul>
+
+    <ul class="footer__ul">
+      <li class="footer__li">
+        <span class="footer__title">Title</span>
+      </li>
+      <li class="footer__li">
+        <a href="#" class="footer__link">item A</a>
+      </li>
+      <li class="footer__li">
+        <a href="#" class="footer__link">Item B</a>
+      </li>
+    </ul>
+
+    <ul class="footer__ul">
+      <li class="footer__li">
+        <span class="footer__title">Title</span>
+      </li>
+      <li class="footer__li">
+        <a href="#" class="footer__link">item A Lorem Ipsum</a>
+      </li>
+      <li class="footer__li">
+        <a href="#" class="footer__link">Item B Lorem Ipsum</a>
+      </li>
+      <li class="footer__li">
+        <a href="#" class="footer__link">Item C</a>
+      </li>
+      <li class="footer__li">
+        <a href="#" class="footer__link">Item D Lorem Ipsum</a>
+      </li>
+      <li class="footer__li">
+        <a href="#" class="footer__link">Item E</a>
+      </li>
+    </ul>
+
+    <ul class="footer__ul">
+      <li class="footer__li">
+        <span class="footer__title">Title</span>
+      </li>
+      <li class="footer__li">
+        <a href="#" class="footer__link">item A Lorem Ipsum</a>
+      </li>
+      <li class="footer__li">
+        <a href="#" class="footer__link">Item B</a>
+      </li>
+      <li class="footer__li">
+        <a href="#" class="footer__link">Item C</a>
+      </li>
+    </ul>
+
+    <ul class="footer__ul">
+      <li class="footer__li">
+        <span class="footer__title">Title</span>
+      </li>
+      <li class="footer__li">
+        <a href="#" class="footer__link">item A Lorem Ipsum <i class="fa fa-area-chart"></i></a>
+      </li>
+      <li class="footer__li">
+        <a href="#" class="footer__link">Item B Lorem Ipsum</a>
+      </li>
+      <li class="footer__li">
+        <a href="#" class="footer__link">Item C Lorem Ipsum</a>
+      </li>
+      <li class="footer__li">
+        <a href="#" class="footer__link">Item D</a>
+      </li>
+    </ul>
+
+    <ul class="footer__ul">
+      <li class="footer__li">
+        <span class="footer__title">Title</span>
+      </li>
+      <li class="footer__li">
+        <a href="#" class="footer__link">item A Lorem Ipsum</a>
+      </li>
+      <li class="footer__li">
+        <a href="#" class="footer__link">Item B Lorem Ipsum</a>
+      </li>
+    </ul>
+  </div>
+  <hr class="footer__horizontal-line">
+  <div class="footer__copy">
+    <h4 class="footer__copy--desc">
+      ChrisTravels &copy; {{year}} | wykonanie - Krzysztof Janik
+    </h4>
+  </div>
+</footer>
